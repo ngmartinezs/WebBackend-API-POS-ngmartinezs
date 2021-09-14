@@ -84,7 +84,7 @@ Para la prueba se propone hacer uso del script de Posmant que encontraras <a hre
 
 ## Despliegue ##
 
-El API ya se encuentra desplegado en <a href="https://apicrudposngmartinezs.azurewebsites.net/apiPos/ngmartinezs/FacturaVentas" target="_blank">una WebApp en Azure...</a>
+El API ya se encuentra desplegado en <a href="https://apicrudposngmartinezs.azurewebsites.net/swagger/index.html" target="_blank">una WebApp en Azure...</a>
 
 ## License ##
 
