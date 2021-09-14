@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "8f0ae070-c028-48b4-b310-e581dc7a6280",
+		"name": "WebBackendApiPOSngmartinezs-Public",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MSProductos",
+			"item": [
+				{
+					"name": "Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Productos",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"nombre\": \"Cafe Sello Rojo\",\r\n        \"descripcion\": \"Cafe Sello Rojo\",\r\n        \"valorUnitario\": 8400.00\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Productos",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Milo\",\r\n    \"descripcion\": \"Milo en lata\",\r\n    \"valorUnitario\": 7400.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44368/apiPos/ngmartinezs/Productos/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44368",
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Productos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Productos/2",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Productos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSCllientes",
+			"item": [
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Clientes",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"id\": 2,\r\n            \"tipoId\": \"CC\",\r\n            \"numeroId\": \"78945612\",\r\n            \"nombre\": \"Fabio\",\r\n            \"apellido\": \"Lombona Gomez\",\r\n            \"telefono\": \"31254541\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Clientes/2",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44368/apiPos/ngmartinez/Clientes/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44368",
+							"path": [
+								"apiPos",
+								"ngmartinez",
+								"Clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \r\n        \"tipoId\": \"CC\",\r\n        \"numeroId\": \"52771628\",\r\n        \"nombre\": \"Maria Tulia\",\r\n        \"apellido\": \"Fernandez\",\r\n        \"telefono\": \"3138443887\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Clientes",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSFacturaVenta",
+			"item": [
+				{
+					"name": "FacturaVentas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n            \"valorTotal\": 6000.00,\r\n            \"clienteId\": 3,\r\n            \"detallesFacturaVenta\": [\r\n                {\r\n                    \"productoId\": 1,\r\n                    \"cantidad\": 3,\r\n                    \"valorDetalle\": 1000\r\n                },\r\n                 {\r\n                    \"productoId\": 3,\r\n                    \"cantidad\": 3,\r\n                    \"valorDetalle\": 1000\r\n                }\r\n            ]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/FacturaVentas",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"FacturaVentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FacturaVentas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"id\": 2,\r\n            \"valorTotal\": 8000.00,\r\n            \"clienteId\": 1,\r\n            \"detallesFacturaVenta\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"facturaVentaId\": 2,\r\n                    \"productoId\": 2,\r\n                    \"cantidad\": 4,\r\n                    \"valorDetalle\": 1000.00\r\n                },\r\n                {\r\n                   \r\n                    \"facturaVentaId\": 2,\r\n                    \"productoId\": 2,\r\n                    \"cantidad\": 4,\r\n                    \"valorDetalle\": 1000.00\r\n                }\r\n            ]\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44368/apiPos/ngmartinezs/FacturaVentas/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44368",
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"FacturaVentas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FacturaVentas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44368/apiPos/ngmartinezs/FacturaVentas/1002",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44368",
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"FacturaVentas",
+								"1002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FacturaVentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/FacturaVentas",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"FacturaVentas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_WS",
+			"value": "https://apicrudposngmartinezs.azurewebsites.net"
+		},
+		{
+			"key": "URL_WS",
+			"value": "https://localhost:44368",
+			"disabled": true
+		}
+	]
+}
