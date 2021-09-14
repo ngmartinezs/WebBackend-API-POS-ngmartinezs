@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "8f0ae070-c028-48b4-b310-e581dc7a6280",
+		"name": "WebBackendApiPOSngmartinezs-Public",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MSProductos",
+			"item": [
+				{
+					"name": "Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Productos",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"nombre\": \"Chocolate\",\r\n        \"descripcion\": \"Chocolate\",\r\n        \"valorUnitario\": 8400.00\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Productos",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \"id\": 3,\r\n            \"nombre\": \"Gaseosa\",\r\n            \"descripcion\": \"Gaseosa\",\r\n            \"valorUnitario\": 8400.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Productos/3",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Productos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Productos/4",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Productos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSCllientes",
+			"item": [
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Clientes",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"id\": 5,\r\n            \"tipoId\": \"CC\",\r\n            \"numeroId\": \"78963852\",\r\n            \"nombre\": \"Marcos\",\r\n            \"apellido\": \"Garay\",\r\n            \"telefono\": \"3138443887\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Clientes/5",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Clientes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Clientes/5",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Clientes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \r\n        \"tipoId\": \"CC\",\r\n        \"numeroId\": \"78963852\",\r\n        \"nombre\": \"Javier\",\r\n        \"apellido\": \"Contreras\",\r\n        \"telefono\": \"3138443887\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/Clientes",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MSFacturaVenta",
+			"item": [
+				{
+					"name": "FacturaVentas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"valorTotal\": 50000.00,\r\n            \"clienteId\": 3,\r\n            \"detallesFacturaVenta\": [\r\n                {\r\n                    \"productoId\": 1,\r\n                    \"cantidad\": 2,\r\n                    \"valorDetalle\": 10000\r\n                },\r\n                 {\r\n                    \"productoId\": 3,\r\n                    \"cantidad\": 3,\r\n                    \"valorDetalle\": 10000\r\n                }\r\n            ]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/FacturaVentas",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"FacturaVentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FacturaVentas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 24,\r\n        \"valorTotal\": 40000.00,\r\n        \"clienteId\": 1,\r\n        \"cliente\": null,\r\n        \"detallesFacturaVenta\": [\r\n            {\r\n                \"id\": 11,\r\n                \"facturaVentaId\": 24,\r\n                \"productoId\": 1,\r\n                \"cantidad\": 1,\r\n                \"valorDetalle\": 10000\r\n            },\r\n            {\r\n                \"id\": 12,\r\n                \"facturaVentaId\": 24,\r\n                \"productoId\": 3,\r\n                \"cantidad\": 3,\r\n                \"valorDetalle\": 10000\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/FacturaVentas/24",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"FacturaVentas",
+								"24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FacturaVentas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/FacturaVentas/1002",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"FacturaVentas",
+								"1002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FacturaVentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_WS}}/apiPos/ngmartinezs/FacturaVentas",
+							"host": [
+								"{{URL_WS}}"
+							],
+							"path": [
+								"apiPos",
+								"ngmartinezs",
+								"FacturaVentas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_WS",
+			"value": "https://apicrudposngmartinezs.azurewebsites.net"
+		},
+		{
+			"key": "URL_WS",
+			"value": "https://localhost:44368",
+			"disabled": true
+		}
+	]
+}
