@@ -12,6 +12,9 @@ using WebBackendAPIPOSngmartinezs.Service;
 
 namespace WebBackendAPIPOSngmartinezs.Controllers
 {
+    /// <summary>
+    /// Deletes a specific TodoItem.
+    /// </summary>
     [Route("apiPos/ngmartinezs/[controller]")]
     [ApiController]
     public class ClientesController : ControllerBase
@@ -23,19 +26,7 @@ namespace WebBackendAPIPOSngmartinezs.Controllers
             this._clienteServiceInterface = _clienteServiceInterface;
         }
 
-        // GET: api/Clientes
-        // GET: api/Pais/5
-        /// <summary>
-        /// Obtiene un objeto por su Id.
-        /// </summary>
-        /// <remarks>
-        /// Aquí una descripción mas larga si fuera necesario. Obtiene un objeto por su Id.
-        /// </remarks>
-        /// <param name="id">Id (GUID) del objeto.</param>
-        /// <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
-        /// <response code="200">OK. Devuelve el objeto solicitado.</response>        
-        /// <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>
-
+        
         [HttpGet]
         public async Task<ActionResult<RespuestaApiDto>> GetClientes()
         {
@@ -52,18 +43,7 @@ namespace WebBackendAPIPOSngmartinezs.Controllers
             }
         }
 
-        // GET: api/Clientes/5
-        /// <summary>
-        /// Obtiene un objeto por su Id.
-        /// </summary>
-        /// <remarks>
-        /// Aquí una descripción mas larga si fuera necesario. Obtiene un objeto por su Id.
-        /// </remarks>
-        /// <param name="id">Id (GUID) del objeto.</param>
-        /// <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
-        /// <response code="200">OK. Devuelve el objeto solicitado.</response>        
-        /// <response code="404">NotFound. No se ha encontrado el objeto solicitado.</response>
-
+   
         [HttpGet("{id}")]
         public async Task<ActionResult<RespuestaApiDto>> GetCliente(int id)
         {
@@ -78,18 +58,7 @@ namespace WebBackendAPIPOSngmartinezs.Controllers
             return new ActionResult<RespuestaApiDto>(lRespuestaApiDto);
         }
 
-        // PUT: api/Clientes/5
-        /// <summary>
-        /// Crea un nuevo objeto en la BD.
-        /// </summary>
-        /// <remarks>
-        /// Aquí una descripción mas larga si fuera necesario. Crea un nuevo objeto en la BD.
-        /// </remarks>
-        /// <param name="pais">Objeto a crear en la BD.</param>
-        /// <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
-        /// <response code="201">Created. Objeto correctamente creado en la BD.</response>        
-        /// <response code="400">BadRequest. No se ha creado el objeto en la BD. Formato del objeto incorrecto.</response>
-        /// <response code="409">Conflict. El objeto a crear ya existe en la BD.</response>
+       
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCliente(int id, Cliente cliente)
         {
@@ -117,19 +86,7 @@ namespace WebBackendAPIPOSngmartinezs.Controllers
             return NoContent();
         }
 
-        // POST: api/Clientes
-        /// <summary>
-        /// Crea un nuevo objeto en la BD.
-        /// </summary>
-        /// <remarks>
-        /// Aquí una descripción mas larga si fuera necesario. Crea un nuevo objeto en la BD.
-        /// </remarks>
-        /// <param name="pais">Objeto a crear en la BD.</param>
-        /// <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
-        /// <response code="201">Created. Objeto correctamente creado en la BD.</response>        
-        /// <response code="400">BadRequest. No se ha creado el objeto en la BD. Formato del objeto incorrecto.</response>
-        /// <response code="409">Conflict. El objeto a crear ya existe en la BD.</response>
-
+      
         [HttpPost]
         public async Task<ActionResult<RespuestaApiDto>> PostCliente(Cliente cliente)
         {
@@ -145,18 +102,7 @@ namespace WebBackendAPIPOSngmartinezs.Controllers
             }
         }
 
-        // DELETE: api/Clientes/5
-        /// <summary>
-        /// Crea un nuevo objeto en la BD.
-        /// </summary>
-        /// <remarks>
-        /// Aquí una descripción mas larga si fuera necesario. Crea un nuevo objeto en la BD.
-        /// </remarks>
-        /// <param name="pais">Objeto a crear en la BD.</param>
-        /// <response code="401">Unauthorized. No se ha indicado o es incorrecto el Token JWT de acceso.</response>              
-        /// <response code="201">Created. Objeto correctamente creado en la BD.</response>        
-        /// <response code="400">BadRequest. No se ha creado el objeto en la BD. Formato del objeto incorrecto.</response>
-        /// <response code="409">Conflict. El objeto a crear ya existe en la BD.</response>
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCliente(int id)
         {

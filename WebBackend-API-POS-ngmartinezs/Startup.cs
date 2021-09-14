@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using WebBackendAPIPOSngmartinezs.Data;
 using WebBackendAPIPOSngmartinezs.Service;
 using WebBackendAPIPOSngmartinezs.Repository;
+using Microsoft.OpenApi.Models;
 
 namespace WebBackend_API_POS_ngmartinezs
 {
@@ -37,8 +38,9 @@ namespace WebBackend_API_POS_ngmartinezs
             services.AddScoped<ClienteServiceInterface, ClienteService>();
             services.AddScoped<FacturaVentaServiceInterface, FacturaVentaService>();
 
-
             services.AddControllers();
+            AddSwagger(services);
+
             services.AddDbContext<WebBackendAPIPOSngmartinezsContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("WebBackendAPIPOSngmartinezsContext")));
 
@@ -62,6 +64,34 @@ namespace WebBackend_API_POS_ngmartinezs
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Backend API POS ngmartinezs");
+            });
+        }
+
+
+        private void AddSwagger(IServiceCollection services)
+        {
+            services.AddSwaggerGen(options =>
+            {
+                var groupName = "v1";
+
+                options.SwaggerDoc(groupName, new OpenApiInfo
+                {
+                    Title = $"Backend API POS ngmartinezs {groupName}",
+                    Version = groupName,
+                    Description = "API que provee servicios para gestionar un proceso de venta.",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "@ngmartinezs",
+                        Email = "ngmartinezs@gamil.com",
+                        Url = new Uri("https://github.com/ngmartinezs/WebBackend-API-POS-ngmartinezs"),
+                    }
+                });
             });
         }
     }
